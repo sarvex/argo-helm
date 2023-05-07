@@ -1588,6 +1588,38 @@ entries:
   argo-cd:
   - annotations:
       artifacthub.io/changes: |
+        - kind: added
+          description: Allow extraObjects to contain string templates
+    apiVersion: v2
+    appVersion: v2.7.1
+    created: "2023-05-07T11:05:19.442337141Z"
+    dependencies:
+    - condition: redis-ha.enabled
+      name: redis-ha
+      repository: https://dandydeveloper.github.io/charts/
+      version: 4.22.5
+    description: A Helm chart for Argo CD, a declarative, GitOps continuous delivery
+      tool for Kubernetes.
+    digest: 4c78b717fe3ca8f5122c3af217c7b814af3c56d781d9e22baaefacbef4eabb6b
+    home: https://github.com/argoproj/argo-helm
+    icon: https://argo-cd.readthedocs.io/en/stable/assets/logo.png
+    keywords:
+    - argoproj
+    - argocd
+    - gitops
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - name: argoproj
+      url: https://argoproj.github.io/
+    name: argo-cd
+    sources:
+    - https://github.com/argoproj/argo-helm/tree/main/charts/argo-cd
+    - https://github.com/argoproj/argo-cd
+    urls:
+    - https://github.com/sarvex/argo-helm/releases/download/argo-cd-5.32.0/argo-cd-5.32.0.tgz
+    version: 5.32.0
+  - annotations:
+      artifacthub.io/changes: |
         - "[Fixed]: Fix typo of policy.csv comment in values"
     apiVersion: v2
     appVersion: v2.2.5
@@ -8247,6 +8279,30 @@ entries:
   argo-events:
   - annotations:
       artifacthub.io/changes: |
+        - kind: added
+          description: Allow extraObjects to contain string templates
+    apiVersion: v2
+    appVersion: v1.7.6
+    created: "2023-05-07T11:05:19.556567103Z"
+    description: A Helm chart for Argo Events, the event-driven workflow automation
+      framework
+    digest: 8960b709018ff40dcb88e78dc7658e0da05d25be692db570a3f06af0afd74892
+    home: https://github.com/argoproj/argo-helm
+    icon: https://argoproj.github.io/argo-events/assets/logo.png
+    keywords:
+    - argoproj
+    - argo-events
+    maintainers:
+    - name: argoproj
+      url: https://argoproj.github.io/
+    name: argo-events
+    sources:
+    - https://github.com/argoproj/argo-events
+    urls:
+    - https://github.com/sarvex/argo-helm/releases/download/argo-events-2.3.0/argo-events-2.3.0.tgz
+    version: 2.3.0
+  - annotations:
+      artifacthub.io/changes: |
         - "[Added]: Add aggregate-roles (sync with upstream manifests)"
     apiVersion: v2
     appVersion: v1.6.0
@@ -9084,6 +9140,29 @@ entries:
   argo-rollouts:
   - annotations:
       artifacthub.io/changes: |
+        - kind: added
+          description: Allow extraObjects to contain string templates
+    apiVersion: v2
+    appVersion: v1.4.1
+    created: "2023-05-07T11:05:19.696655211Z"
+    description: A Helm chart for Argo Rollouts
+    digest: 2b445a9cec9fc94a6a3813f6fe6360eca78559e18e5ae07e3e54408cf2e3026a
+    home: https://github.com/argoproj/argo-helm
+    icon: https://argoproj.github.io/argo-rollouts/assets/logo.png
+    keywords:
+    - argoproj
+    - argo-rollouts
+    maintainers:
+    - name: argoproj
+      url: https://argoproj.github.io/
+    name: argo-rollouts
+    sources:
+    - https://github.com/argoproj/argo-rollouts
+    urls:
+    - https://github.com/sarvex/argo-helm/releases/download/argo-rollouts-2.27.0/argo-rollouts-2.27.0.tgz
+    version: 2.27.0
+  - annotations:
+      artifacthub.io/changes: |
         - "[Added]: Ability to define dashboard service node port"
     apiVersion: v2
     appVersion: v1.1.1
@@ -9868,6 +9947,27 @@ entries:
     - argo-rollouts-0.1.0.tgz
     version: 0.1.0
   argo-workflows:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: chore
+          description: Update Chart icon
+    apiVersion: v2
+    appVersion: v3.4.7
+    created: "2023-05-07T11:05:19.863878362Z"
+    description: A Helm chart for Argo Workflows
+    digest: e0954fd68deaa40a5b12b302d94dd4a8749b2464408dc5dfb9701631aab15f10
+    home: https://github.com/argoproj/argo-helm
+    icon: https://argoproj.github.io/argo-workflows/assets/logo.png
+    maintainers:
+    - name: argoproj
+      url: https://argoproj.github.io/
+    name: argo-workflows
+    sources:
+    - https://github.com/argoproj/argo-workflows
+    type: application
+    urls:
+    - https://github.com/sarvex/argo-helm/releases/download/argo-workflows-0.26.1/argo-workflows-0.26.1.tgz
+    version: 0.26.1
   - annotations:
       artifacthub.io/changes: |
         - "[Changed]: Update to app version v3.2.7"
@@ -11268,7 +11368,54 @@ entries:
     urls:
     - argocd-applicationset-0.1.0.tgz
     version: 0.1.0
+  argocd-apps:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: fixed
+          description: Changed the project field of the applicationset from a tpl function to a string.
+    apiVersion: v2
+    created: "2023-05-07T11:05:19.990666198Z"
+    description: A Helm chart for managing additional Argo CD Applications and Projects
+    digest: fea1c68f045c1bd8f44046b31b064421bede79592d25956fd0031f3bbab911f0
+    home: https://github.com/argoproj/argo-helm
+    icon: https://argo-cd.readthedocs.io/en/stable/assets/logo.png
+    keywords:
+    - argoproj
+    - argocd
+    - gitops
+    maintainers:
+    - name: argoproj
+      url: https://argoproj.github.io/
+    name: argocd-apps
+    type: application
+    urls:
+    - https://github.com/sarvex/argo-helm/releases/download/argocd-apps-1.0.0/argocd-apps-1.0.0.tgz
+    version: 1.0.0
   argocd-image-updater:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: fixed
+          description: add namespace field for namespace scoped resources
+    apiVersion: v2
+    appVersion: v0.12.2
+    created: "2023-05-07T11:05:20.110570348Z"
+    description: A Helm chart for Argo CD Image Updater, a tool to automatically update
+      the container images of Kubernetes workloads which are managed by Argo CD
+    digest: 484c7281025ff7f20f6f7dd8cb7baca34ea0947cb840ca31090b9887f8d44cda
+    home: https://github.com/argoproj-labs/argocd-image-updater
+    icon: https://argocd-image-updater.readthedocs.io/en/stable/assets/logo.png
+    keywords:
+    - argoproj
+    - argocd
+    - gitops
+    maintainers:
+    - name: argoproj
+      url: https://argoproj.github.io/
+    name: argocd-image-updater
+    type: application
+    urls:
+    - https://github.com/sarvex/argo-helm/releases/download/argocd-image-updater-0.9.0/argocd-image-updater-0.9.0.tgz
+    version: 0.9.0
   - annotations:
       artifacthub.io/changes: |
         - "[Changed]: Update to app version v0.11.3"
@@ -12295,4 +12442,4 @@ entries:
     urls:
     - argocd-notifications-1.0.0.tgz
     version: 1.0.0
-generated: "2022-02-20T23:01:56.774644681Z"
+generated: "2023-05-07T11:05:20.11448784Z"
